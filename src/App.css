@@ -1,0 +1,31 @@
+table {
+  border-collapse: collapse;
+  /* width: 100%; */
+}
+
+th,
+td {
+  border: 1px solid green;
+  padding: 8px;
+  /* text-align: left; */
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+body {
+  margin: 20%;
+}
