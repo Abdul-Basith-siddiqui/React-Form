@@ -1,13 +1,10 @@
 import React from "react";
+import { useContext } from "react";
+import { MyContext } from "../App";
 
-const TableRow = ({
-  row,
-  index,
-  handleChange,
-  deleteRow,
-  formatNumber,
-  rowTotals,
-}) => {
+const TableRow = ({ row, index }) => {
+  const { rowTotals, deleteRow, handleChange } = useContext(MyContext);
+
   return (
     <tr key={index}>
       <td>

@@ -1,6 +1,11 @@
 import React from "react";
 
-const AddRowButton = ({ addRow }) => {
+import { useContext } from "react";
+import { MyContext } from "../App";
+
+const AddRowButton = () => {
+  const { addRow } = useContext(MyContext);
+
   return (
     <button type="button" onClick={addRow}>
       Add Row

@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 import "./App.css";
-import TableHead from "./TableHead";
-import TableBody from "./TableBody";
-import AddRowButton from "./AddRowButton";
+import TableHead from "./components/TableHead";
+import TableBody from "./components/TableBody";
+import AddRowButton from "./components/AddRowButton";
 // import DeleteRowButton from "./DeleteRowButton";
+
+//creating creaeContext
+export const MyContext = createContext();
 
 function App() {
   // Initialize the state with three rows
@@ -59,19 +62,17 @@ function App() {
   );
 
   return (
-    <div className="App">
-      <table>
-        <TableHead />
-        <TableBody
-          rows={rows}
-          handleChange={handleChange}
-          deleteRow={deleteRow}
-          formatNumber={formatNumber}
-          rowTotals={rowTotals}
-        />
-      </table>
-      <AddRowButton addRow={addRow} />
-    </div>
+    <MyContext.Provider
+      value={{ rows, handleChange, deleteRow, formatNumber, rowTotals, addRow }}
+    >
+      <div className="App">
+        <table>
+          <TableHead />
+          <TableBody />
+        </table>
+        <AddRowButton />
+      </div>
+    </MyContext.Provider>
   );
 }
 
