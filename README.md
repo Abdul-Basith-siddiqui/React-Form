@@ -1,3 +1,9 @@
+# React Form WebApp
+
+This is a simple React application that allows a user to create a table of rows with three columns: "Account", "Debit Amount", and "Credit Amount". The user can add new rows to the table and delete existing rows. The application also keeps track of the total of the "Credit Amount" column minus the "Debit Amount" column.
+
+The formatNumber function is used to format the numbers in the "Debit Amount" and "Credit Amount" fields as Indian number format.
+The component also includes a buttons for adding a new row to the table and Deleting any row.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
